@@ -1,0 +1,11 @@
+D:\Data\Programming\Dot Net Core\ASPNetCore.WebAPI\ASPNetCore.WebAPI\bin\Debug\netcoreapp2.0\ASPNetCore.WebAPI.deps.json
+D:\Data\Programming\Dot Net Core\ASPNetCore.WebAPI\ASPNetCore.WebAPI\bin\Debug\netcoreapp2.0\ASPNetCore.WebAPI.runtimeconfig.json
+D:\Data\Programming\Dot Net Core\ASPNetCore.WebAPI\ASPNetCore.WebAPI\bin\Debug\netcoreapp2.0\ASPNetCore.WebAPI.runtimeconfig.dev.json
+D:\Data\Programming\Dot Net Core\ASPNetCore.WebAPI\ASPNetCore.WebAPI\bin\Debug\netcoreapp2.0\ASPNetCore.WebAPI.dll
+D:\Data\Programming\Dot Net Core\ASPNetCore.WebAPI\ASPNetCore.WebAPI\obj\Debug\netcoreapp2.0\ASPNetCore.WebAPI.csprojResolveAssemblyReference.cache
+D:\Data\Programming\Dot Net Core\ASPNetCore.WebAPI\ASPNetCore.WebAPI\obj\Debug\netcoreapp2.0\ASPNetCore.WebAPI.csproj.CoreCompileInputs.cache
+D:\Data\Programming\Dot Net Core\ASPNetCore.WebAPI\ASPNetCore.WebAPI\obj\Debug\netcoreapp2.0\ASPNetCore.WebAPI.AssemblyInfoInputs.cache
+D:\Data\Programming\Dot Net Core\ASPNetCore.WebAPI\ASPNetCore.WebAPI\obj\Debug\netcoreapp2.0\ASPNetCore.WebAPI.AssemblyInfo.cs
+D:\Data\Programming\Dot Net Core\ASPNetCore.WebAPI\ASPNetCore.WebAPI\bin\Debug\netcoreapp2.0\ASPNetCore.WebAPI.pdb
+D:\Data\Programming\Dot Net Core\ASPNetCore.WebAPI\ASPNetCore.WebAPI\obj\Debug\netcoreapp2.0\ASPNetCore.WebAPI.dll
+D:\Data\Programming\Dot Net Core\ASPNetCore.WebAPI\ASPNetCore.WebAPI\obj\Debug\netcoreapp2.0\ASPNetCore.WebAPI.pdb
