@@ -2,6 +2,50 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "AutoMapper/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Linq.Queryable": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "5.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0",
+          "Microsoft.Extensions.DependencyModel": "1.0.0",
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -1688,6 +1732,18 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
+        }
+      },
+      "Microsoft.DotNet.Watcher.Tools/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.App": "2.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/dotnet-watch.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/dotnet-watch.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore/2.0.1": {
@@ -3935,17 +3991,17 @@
           "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
-      "System.Linq.Queryable/4.0.1": {
+      "System.Linq.Queryable/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.0.11",
-          "System.Diagnostics.Debug": "4.0.11",
-          "System.Linq": "4.1.0",
-          "System.Linq.Expressions": "4.1.0",
-          "System.Reflection": "4.1.0",
-          "System.Reflection.Extensions": "4.0.1",
-          "System.Resources.ResourceManager": "4.0.1",
-          "System.Runtime": "4.1.0"
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
@@ -5073,6 +5129,33 @@
     }
   },
   "libraries": {
+    "AutoMapper/6.0.1": {
+      "sha512": "YppR+45p4gQVQmtvlysf0kDTtBs9nM120FGc/LNZ3w6sAnEDIfVfcVhzZyIUAFz5fMhYggtYqx8rxK7YqF4Ywg==",
+      "type": "package",
+      "path": "automapper/6.0.1",
+      "files": [
+        "automapper.6.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net45/AutoMapper.dll",
+        "lib/net45/AutoMapper.xml",
+        "lib/netstandard1.1/AutoMapper.dll",
+        "lib/netstandard1.1/AutoMapper.xml",
+        "lib/netstandard1.3/AutoMapper.dll",
+        "lib/netstandard1.3/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/1.2.0": {
+      "sha512": "pSWmuxqlE6aZNSljcEC0hXEGHrswi2ukYGDiypcBNYMLaOwPxpp4LmT9z9Eqb3EDweC1S9uRSLQPiuSRhwxVow==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/1.2.0",
+      "files": [
+        "automapper.extensions.microsoft.dependencyinjection.1.2.0.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "lib/net451/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
+        "lib/netstandard1.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
+        "lib/netstandard1.6/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
     "Libuv/1.10.0": {
       "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "type": "package",
@@ -6405,6 +6488,21 @@
         "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
         "microsoft.dotnet.platformabstractions.2.0.3.nupkg.sha512",
         "microsoft.dotnet.platformabstractions.nuspec"
+      ]
+    },
+    "Microsoft.DotNet.Watcher.Tools/2.0.0": {
+      "sha512": "//UgdKyy1W4PHxC77HzhxEG/drLu9UplJe0UBa0161DH947quz+EJ0AEVCjDlFC7FnJKXfr5yDIYcuZUn5ux4Q==",
+      "type": "package",
+      "path": "microsoft.dotnet.watcher.tools/2.0.0",
+      "files": [
+        "lib/netcoreapp2.0/dotnet-watch.dll",
+        "lib/netcoreapp2.0/dotnet-watch.runtimeconfig.json",
+        "microsoft.dotnet.watcher.tools.2.0.0.nupkg.sha512",
+        "microsoft.dotnet.watcher.tools.nuspec",
+        "prefercliruntime",
+        "toolassets/DotNetWatchCommon.targets",
+        "toolassets/DotNetWatchInner.targets",
+        "toolassets/DotNetWatchOuter.targets"
       ]
     },
     "Microsoft.EntityFrameworkCore/2.0.1": {
@@ -10253,10 +10351,10 @@
         "system.linq.parallel.nuspec"
       ]
     },
-    "System.Linq.Queryable/4.0.1": {
-      "sha512": "wV52ZT0e0fDSqIUlTeAPgar1BZSApBBJTx5w96YYPz9bYsQzLDPQW1uX/bOLqi6VO5GCRM5e8iEnuNamLgLikg==",
+    "System.Linq.Queryable/4.3.0": {
+      "sha512": "In1Bmmvl/j52yPu3xgakQSI0YIckPUr870w4K5+Lak3JCCa8hl+my65lABOuKfYs4ugmZy25ScFerC4nz8+b6g==",
       "type": "package",
-      "path": "system.linq.queryable/4.0.1",
+      "path": "system.linq.queryable/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -10306,7 +10404,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.linq.queryable.4.0.1.nupkg.sha512",
+        "system.linq.queryable.4.3.0.nupkg.sha512",
         "system.linq.queryable.nuspec"
       ]
     },
@@ -13188,7 +13286,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "AutoMapper >= 6.0.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 1.2.0",
       "Microsoft.AspNetCore.All >= 2.0.3",
+      "Microsoft.DotNet.Watcher.Tools >= 2.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 2.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 2.0.0-preview1-final",
@@ -13204,15 +13305,12 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "D:\\Data\\Programming\\Dot Net Core\\ASPNetCore.WebAPI\\ASPNetCore.WebAPI\\ASPNetCore.WebAPI.csproj",
+      "projectUniqueName": "D:\\Data\\Programming\\Dot Net Core\\Web API\\ASPNetCore.WebAPI\\ASPNetCore.WebAPI\\ASPNetCore.WebAPI.csproj",
       "projectName": "ASPNetCore.WebAPI",
-      "projectPath": "D:\\Data\\Programming\\Dot Net Core\\ASPNetCore.WebAPI\\ASPNetCore.WebAPI\\ASPNetCore.WebAPI.csproj",
+      "projectPath": "D:\\Data\\Programming\\Dot Net Core\\Web API\\ASPNetCore.WebAPI\\ASPNetCore.WebAPI\\ASPNetCore.WebAPI.csproj",
       "packagesPath": "C:\\Users\\Fagun\\.nuget\\packages\\",
-      "outputPath": "D:\\Data\\Programming\\Dot Net Core\\ASPNetCore.WebAPI\\ASPNetCore.WebAPI\\obj\\",
+      "outputPath": "D:\\Data\\Programming\\Dot Net Core\\Web API\\ASPNetCore.WebAPI\\ASPNetCore.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13242,26 +13340,30 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Tools": {
+          "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "2.0",
+            "autoReferenced": true
           },
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+          "AutoMapper": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "6.0.1"
           },
-          "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "1.2.0"
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "2.0.3"
+          },
+          "Microsoft.DotNet.Watcher.Tools": {
             "target": "Package",
             "version": "2.0.0"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "target": "Package",
             "version": "2.0.1"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
@@ -13271,9 +13373,17 @@
             "target": "Package",
             "version": "2.0.0-preview1-final"
           },
-          "Microsoft.AspNetCore.All": {
+          "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "2.0.3"
+            "version": "2.0.1"
+          },
+          "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+            "target": "Package",
+            "version": "2.0.0"
+          },
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "target": "Package",
+            "version": "2.0.0"
           }
         },
         "imports": [
