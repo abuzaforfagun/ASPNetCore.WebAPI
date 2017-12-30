@@ -12,8 +12,6 @@ namespace ASPNetCore.WebAPI.Core.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        
-
         public List<AuthorBook> BooksLink { get; set; }
 
         public Author()

@@ -7,7 +7,12 @@ namespace ASPNetCore.WebAPI.Presistance
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public Category Categories { get; set; }
-        public List<Author> Authors { get; set; }
+        public KeyValuePresistance Categories { get; set; }
+        public List<KeyValuePresistance> Authors { get; set; }
+
+        public BookPresistance()
+        {
+            Authors = new List<KeyValuePresistance>();
+        }
     }
 }

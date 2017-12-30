@@ -12,7 +12,7 @@ namespace ASPNetCore.WebAPI.Core.Models
         public List<Book> BooksLink { get; set; }
         public Category()
         {
-            
+            BooksLink=new List<Book>();
         }
     }
 }

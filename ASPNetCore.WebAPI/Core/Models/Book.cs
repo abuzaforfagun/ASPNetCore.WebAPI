@@ -12,6 +12,11 @@ namespace ASPNetCore.WebAPI.Core.Models
         public Category Categories { get; set; }
 
         public List<AuthorBook> AuthorsLink { get; set; }
+
+        public Book()
+        {
+            AuthorsLink = new List<AuthorBook>();
+        }
         
     }
 }

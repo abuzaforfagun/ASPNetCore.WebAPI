@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ASPNetCore.WebAPI.Core.Models;
 using ASPNetCore.WebAPI.Presistance;
+using AutoMapper;
 
 namespace ASPNetCore.WebAPI.Controllers
 {
@@ -24,7 +25,7 @@ namespace ASPNetCore.WebAPI.Controllers
         // GET: api/Books
         [HttpGet]
         public IEnumerable<Book> GetBooks()
-        { 
+        {
             return _context.Books;
         }
 
@@ -84,19 +85,32 @@ namespace ASPNetCore.WebAPI.Controllers
 
         // POST: api/Books
         [HttpPost]
-        public async Task<IActionResult> PostBook([FromBody] Book book)
+        public async Task<IActionResult> PostBook([FromBody] BookPresistance bookPresistance)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
+            var book = Mapper.Map<BookPresistance, Book>(bookPresistance);
+            foreach(var a in bookPresistance.Authors){
+                var author = Mapper.Map<Author>(a);
+                AuthorBook authorBook = new AuthorBook(){
+                    Author = author,
+                    Book = book
+                };
+                book.AuthorsLink.Add(authorBook);
+            }
             _context.Books.Add(book);
             await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetBook", new { id = book.Id }, book);
+            bookPresistance = Mapper.Map<Book, BookPresistance>(book);
+            
+            foreach(var ab in book.AuthorsLink){
+                var author = Mapper.Map<Author, KeyValuePresistance>(ab.Author);
+                bookPresistance.Authors.Add(author);
+            }
+            return Ok(bookPresistance);
         }
-
+        
         // DELETE: api/Books/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBook([FromRoute] int id)
