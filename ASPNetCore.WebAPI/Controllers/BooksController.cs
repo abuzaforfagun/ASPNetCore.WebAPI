@@ -83,6 +83,30 @@ namespace ASPNetCore.WebAPI.Controllers
             return NoContent();
         }
 
+        private List<AuthorBook> ConvertKeyValuePresistanceToAuthor(List<KeyValuePresistance> authors, Book book){
+            List<AuthorBook> authorBookList = new List<AuthorBook>();
+            foreach(var a in authors){
+                var author = Mapper.Map<Author>(a);
+                AuthorBook authorBook = new AuthorBook(){
+                    Author = author,
+                    Book = book
+                };
+                authorBookList.Add(authorBook);
+            }
+            return authorBookList;
+        }
+
+        private List<KeyValuePresistance> ConvertnAuthorToKeyValuePresistance(List<AuthorBook> authors)
+        {
+            List<KeyValuePresistance> keyValuePresistanceList = new List<KeyValuePresistance>();
+            foreach(var ab in authors){
+                var author = Mapper.Map<Author, KeyValuePresistance>(ab.Author);
+                keyValuePresistanceList.Add(author);
+            }
+            return keyValuePresistanceList;
+        }
+
+        
         // POST: api/Books
         [HttpPost]
         public async Task<IActionResult> PostBook([FromBody] BookPresistance bookPresistance)
@@ -92,22 +116,11 @@ namespace ASPNetCore.WebAPI.Controllers
                 return BadRequest(ModelState);
             }
             var book = Mapper.Map<BookPresistance, Book>(bookPresistance);
-            foreach(var a in bookPresistance.Authors){
-                var author = Mapper.Map<Author>(a);
-                AuthorBook authorBook = new AuthorBook(){
-                    Author = author,
-                    Book = book
-                };
-                book.AuthorsLink.Add(authorBook);
-            }
+            book.AuthorsLink=ConvertKeyValuePresistanceToAuthor(bookPresistance.Authors, book);
             _context.Books.Add(book);
             await _context.SaveChangesAsync();
             bookPresistance = Mapper.Map<Book, BookPresistance>(book);
-            
-            foreach(var ab in book.AuthorsLink){
-                var author = Mapper.Map<Author, KeyValuePresistance>(ab.Author);
-                bookPresistance.Authors.Add(author);
-            }
+            bookPresistance.Authors = ConvertnAuthorToKeyValuePresistance(book.AuthorsLink);
             return Ok(bookPresistance);
         }
         
